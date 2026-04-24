@@ -16,8 +16,12 @@
         </tr>
       </thead>
       <tbody>
-        <tr><td>1</td><td>Laptop</td><td>$500</td></tr>
-        <tr><td>2</td><td>Mouse</td><td>$20</td></tr>
+      {% for prod in products %}
+        <tr>
+            <td>{{ prod.id }}</td>
+            <td>{{ prod.name }}</td>
+            <td>{{ prod.price }}</td></tr>
+      {% endfor %}
       </tbody>
     </table>
   </div>

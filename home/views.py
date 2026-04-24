@@ -12,9 +12,24 @@ def index(request):
 
 
 def users(request):
-    return render(request, "users.html")
+    users = [
+        {"id": 1, "name": "Briones", "email": "briones@gmail.com"},
+        {"id": 2, "name": "Blando", "email": "blando@gmail.com"},
+        {"id": 3, "name": "Bradi", "email": "bradi@gmail.com"},
+    ]
+
+    return render(request, "users.html",
+                  {"users": users}
+                  )
 
 
 def products(request):
-    return render(request, "products.html")
+    pro = [
+        {"id": 1, "name": "Laptop", "price": "100000"},
+        {"id": 2, "name": "Mouse", "price": "500"},
+        {"id": 3, "name": "Keyboard", "price": "1000"},
+    ]
+    prod = { "products" : pro}
+
+    return render(request, "products.html", prod)
 
