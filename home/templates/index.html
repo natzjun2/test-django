@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ title }}
+    {% endblock %}
+
+ {% block content %}
+Welcome {{ user }} !, {{ role }}
+
+<br>
+
+
+<ul>
+    {% for hobby in hobbies %}
+    <li>{{ hobby }} </li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
